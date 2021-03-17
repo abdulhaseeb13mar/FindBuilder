@@ -30,7 +30,7 @@ const ContactDetails = (props) => {
   const [phoneErrMsg, setPhoneErrMsg] = useState('');
   const [address, setAddress] = useState('');
   const [addressErrMsg, setAddressErrMsg] = useState('');
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const builder = props.builderInfo;
 
@@ -261,6 +261,7 @@ const ContactDetails = (props) => {
             containerStyle={styles.confirmButtonContainer}
             onPress={Hire}
             loading={loading}
+            titleStyle={{color: 'black', fontWeight: 'bold'}}
           />
         </View>
         <Overlay
